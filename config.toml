@@ -1,0 +1,8 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Daily JavaScript"
+theme = "hyde"
+
+[params]
+  themeColor = "theme-base-0a"
+  description = ""
