@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://dreamy-kowalevski-1579ee.netlify.com/"
 languageCode = "en-us"
 title = "Daily JavaScript"
 theme = "hyde"
