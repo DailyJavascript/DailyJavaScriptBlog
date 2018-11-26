@@ -1,8 +1,8 @@
 baseURL = "https://dreamy-kowalevski-1579ee.netlify.com/"
 languageCode = "en-us"
 title = "Daily JavaScript"
-theme = "hyde"
+theme = ["custom", "hyde"]
 
 [params]
   themeColor = "theme-base-0a"
-  description = ""
+  description = "Learning how to be a better programmer"

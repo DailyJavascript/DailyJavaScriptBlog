@@ -1,0 +1,54 @@
+
+
+.theme-base-0a aside.sidebar {
+  /* font-size: calc( attr(width) * 0.58 )... If only one could. */
+  /* oh god no... can someone please get http://www.houseind.com/fonts/neutraface2 into the public domain. */
+  letter-spacing: -1px;
+  font-weight: 700;
+  background-color: #f3df49;
+  color: #2e2e2c;
+}
+.theme-base-0a .content a {
+  color: #2e2e2c;
+}
+
+
+.container {
+  padding: 0;
+}
+
+.sidebar-sticky {
+  bottom: initial;
+}
+
+.sidebar-about h1 {
+  font-size: 3rem;
+  color: #2e2e2c;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+main.content.container {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.post {
+  margin-bottom: 2em;
+  text-align: justify;
+}
+
+
+@media (max-width: 32em) {
+  .sidebar-about h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 767px) {
+  main.content.container {
+    margin-left: 20rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+  }
+}
