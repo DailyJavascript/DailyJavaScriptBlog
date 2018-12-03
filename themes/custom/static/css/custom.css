@@ -48,6 +48,11 @@ main.content.container {
   .sidebar-about h1 {
     font-size: 2.5rem;
   }
+
+  main h1{
+    text-align: justify;
+    font-size: 1.32rem;
+  }
 }
 
 @media (min-width: 767px) {
