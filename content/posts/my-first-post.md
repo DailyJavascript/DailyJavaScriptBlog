@@ -1,25 +1,102 @@
 ---
-title: "Why learn JavaScript?"
+title: "What is strict mode and should you enable it when writing JavaScript?"
 date: 2018-11-20T00:16:19-05:00
 draft: false
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec bibendum tortor. Pellentesque felis dui, mattis eu condimentum sed, congue sed tortor. Fusce tincidunt felis ac lacus ultrices condimentum. Sed ut mi quis turpis tincidunt lacinia. Curabitur tempus vel felis a fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut pellentesque sodales risus, id faucibus leo elementum ut. Cras tempor commodo posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse ante urna, consectetur a pulvinar ut, tincidunt in neque. Fusce vestibulum interdum nibh vel accumsan. Quisque sit amet pretium ligula, sit amet tempus tellus.
+A few of our users at [Daily JavaScript](https://www.dailyjavascript.io) have emailed me asking if they should enable strict mode when writing the solution to the daily javascript coding challenges. I decided to write a post to clarify to all our users what strict mode is and if there is any benefits to enabling it when writing their coding solutions.
 
-Duis cursus fringilla quam, quis luctus est. Donec malesuada luctus elit, sed eleifend lacus laoreet eget. Phasellus finibus ex eget urna commodo, a tristique felis eleifend. Curabitur pretium maximus risus. Morbi elementum sit amet est nec viverra. Nunc consectetur felis a sodales egestas. Ut felis erat, venenatis eu laoreet in, tempus nec tellus. Aliquam gravida nisi ac nisl ultricies pulvinar. Nulla pretium volutpat erat sit amet condimentum. Aenean vel aliquet quam. Mauris quis odio ac erat vestibulum finibus id in leo. Cras laoreet laoreet velit, id semper turpis blandit ac. Morbi venenatis orci nisi, non accumsan libero facilisis at.
+## TL;DR
+**JavaScript lets you declare 'strict mode' in your JavaScript files to remove some of the flexibility innate in the JavaScript language prior to ES5. It's not required for solving the coding challenges and no company is going to think poorly of you if you neglect to include it in your solutions when you are given a coding challenge or whiteboard problem during a technical interview.**
 
-Integer rutrum auctor sapien a scelerisque. Sed molestie neque sit amet hendrerit pellentesque. Nam quis est euismod, rutrum mauris feugiat, placerat dolor. Aenean efficitur vitae sapien fringilla finibus. Aliquam rhoncus massa in lorem varius aliquet. Phasellus convallis dolor ipsum, et tempor dui rhoncus at. Etiam ac sodales sapien. Cras venenatis tempus elit, vitae pretium est elementum in. Sed id ipsum massa. Phasellus enim leo, vulputate ac tortor eget, pellentesque interdum diam.
+With that out of the way, let's dive into what strict mode is and how we would enable it.
 
-Nam rhoncus neque a erat consectetur, nec accumsan dolor viverra. Donec vel venenatis tortor. Cras placerat, sem nec ultricies sagittis, magna quam rhoncus lorem, sit amet eleifend leo magna id mi. Fusce et magna non turpis pulvinar ornare ut sed urna. Suspendisse luctus, erat a convallis dictum, dui ante maximus lorem, sed volutpat risus leo a felis. Phasellus elementum, lacus vitae dapibus pharetra, est eros molestie metus, et tempor arcu ex in nunc. Cras feugiat vitae sapien eu facilisis. Mauris cursus sapien at nibh facilisis, vel hendrerit nibh tristique. Ut vel consequat nisl. Maecenas gravida ut nisl eleifend ultricies. Proin vestibulum id ante posuere egestas. Proin et erat elit. Donec sodales nisi enim, sollicitudin condimentum nulla pharetra nec. Cras aliquam ac nisi nec rhoncus.
+Strict Mode was a feature introduced in ES5.  When you enable it, the JavaScript runtime prevents certain code that's considered bad practice from being executed and throws more exceptions instead of silently failing.
 
-Mauris facilisis vitae metus in lobortis. Nam eu risus tortor. Aliquam id turpis quis lorem sagittis viverra at eget mi. Maecenas ac sem non dui ullamcorper faucibus. Mauris et pulvinar ante. Phasellus ipsum ex, porta blandit elit vel, ultrices gravida lectus. Vivamus ut luctus mauris. Nulla facilisis porta sem id porta.
+So why is this good?
 
-Mauris hendrerit posuere cursus. Vivamus maximus, odio ut varius varius, ex lacus scelerisque sapien, non posuere neque neque a lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consequat, mi id ultrices laoreet, orci ipsum congue libero, at iaculis dui magna ut tellus. Vivamus neque ex, eleifend nec velit et, mollis posuere sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut eget rhoncus quam. Aenean ornare est sem, nec consectetur mi gravida malesuada. Praesent at odio ac velit sagittis fermentum. Nulla congue lobortis leo, id lobortis tortor. Fusce lacinia, ipsum sit amet condimentum faucibus, arcu erat bibendum erat, vel mattis est est vel magna. Integer consequat tristique neque, at ullamcorper purus vehicula eget.
+JavaScript is designed to be easy for developers to write and execute code.  Compared to say Haskell or Java, JavaScript developers do not have to worry about compiling their code or writing types.  So if you're a novice JavaScript developer, you could get a program set up and working pretty fast.  This speed though has some drawbacks in that some of the code written can contain bugs that affect the program much later on as the complexity of the program increases.  With strict mode enabled, some classification of bugs are caught much earlier and can be fixed by the developer before it affects the program.  Three common beginner JavaScript developer bugs restricted with strict mode:
 
-Donec consectetur risus ut blandit condimentum. Aliquam ac elit erat. Ut condimentum sem sed justo blandit convallis. Donec semper nibh a sodales fringilla. Ut at dolor id augue iaculis varius nec a nisl. Vestibulum a nulla et elit mattis commodo ac at sem. Suspendisse commodo risus in sem gravida, et scelerisque leo molestie. In aliquet ipsum nisl, eu accumsan elit fringilla a. Integer quis magna eros. Nam purus mauris, auctor sit amet ante eget, convallis accumsan nunc. Mauris malesuada convallis euismod.
+1.  Strict mode makes it impossible to accidentally create global variables
+```
+function notStrictModeEnabled() {
+		x = 17
+ };
+ notStrictModeEnabled() //no errors
+ ```
 
-Fusce dolor neque, suscipit quis orci quis, ultrices ultricies odio. Ut eros orci, faucibus id posuere lacinia, varius in sem. Nam bibendum blandit magna, rutrum aliquam purus dapibus eu. Duis euismod sit amet lectus in tempor. Ut auctor vehicula elit, vel aliquam sapien elementum condimentum. Phasellus accumsan ante in fringilla pretium. Aenean lobortis nisl eu augue efficitur, sed posuere dui finibus. Pellentesque eu erat a ante pharetra tincidunt. Cras vehicula condimentum ipsum, viverra ultrices risus auctor non. Morbi rutrum hendrerit dolor et congue. Cras vestibulum lacus laoreet enim lobortis ornare. Suspendisse potenti. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi. Curabitur dignissim diam a elit rhoncus, ut accumsan leo elementum. Phasellus ac facilisis orci.
+ ```
+function strictModeEnabled() {
+  'use strict'
+		x = 17
+ };
+ strictModeEnabled() //errors
+ ```
+2. Strict mode makes assignments which would otherwise silently fail to throw an exception.
+```
+function notStrictModeEnabled() {
+		Infinity = 17
+ };
+ notStrictModeEnabled() //no errors
+ ```
 
-Donec maximus malesuada est eu sagittis. Fusce sed pulvinar metus, at convallis orci. Praesent hendrerit at enim non rhoncus. Sed fermentum et tortor ut fermentum. Donec facilisis dignissim mi at ultricies. Vivamus eu lectus turpis. Maecenas malesuada tincidunt lectus. Donec maximus rutrum mi, vitae tincidunt lectus sodales vitae. Donec odio lacus, aliquam nec tempus vel, tristique at augue. Pellentesque eget enim mauris. Pellentesque sit amet turpis ac lacus mattis vehicula. Praesent maximus metus lorem, ac rhoncus lorem ullamcorper vitae. Nullam maximus iaculis gravida. Sed et mi sem.
+ ```
+function strictModeEnabled() {
+  'use strict'
+		Infinity = 17
+ };
+ strictModeEnabled() //errors
+ ```
+3. Strict mode requires that function parameter names be unique.
+ ```
+ function notUniqueParamsInFunction(a, a, c) {
+  'use strict';
+  return a + a + c; // errors
+}
+ ```
 
-Curabitur ornare est et magna dapibus auctor ac eu urna. In eu gravida turpis, vitae eleifend turpis. Vivamus eget nisi id metus bibendum tempor. Proin eget sagittis orci. Aliquam erat volutpat. Quisque quis nibh ipsum. Phasellus ligula metus, varius vitae viverra vel, lacinia sed felis.
+There are many more restrictions that strict mode introduces that you can read about in the official standards on page 235: [ECMA Language Specification](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf) or you can check out MDN's Strict Mode article for a more readable experience [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+
+Cool! So how do I enable this in my code?
+
+There are four ways to enable 'strict mode':
+
+1. You include it at the top of your file or script tag.
+ ```
+ 'use strict';
+
+ //...rest of your file
+ ```
+ or
+
+ ```
+ <script>
+ `use strict`
+ // ...rest of your code
+ </script>
+ ```
+
+ 2. You can include it at the top of your function declaration or function expression.
+ ```
+ function strictModeEnabledFunctionDeclaration(){
+   'use strict';
+   //...rest of your code;
+ }
+
+ var strictModeEnabledFunctionExpression = function() {
+   'use strict';
+   //...rest of your code;
+ }
+```
+3. Your code is automatically in strict mode if you export it as a module.
+```
+function strictModule() {
+    // because this is a module, I'm strict by default
+}
+
+export default strictModule;
+```
+4. Use babel.  In Babel 6, transformations for ES6 modules ran on whatever files it was told to process, never taking into account if the file actually had ES6 imports/exports in them.  This had the effect of inserting "use strict" at the top of all modules that were processed by Babel.  In Babel 7, you would have to enable this behavior by using transform-strict-mode plugin.
+
+There are other benefits to using strict mode that I didn't mention in this post that you can read about more in the MDN Strict Mode article mentioned above.   These include code optimization by the JavaScript engine in the browsers, more secure JavaScript code and restricting namespaces for future JavaScript features.  Some big companies currently using strict mode in production include Facebook and Google.
+
