@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.51" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>What is strict mode and should you enable it when writing JavaScript? &middot; Daily JavaScript</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://dailyjavascriptblog.netlify.com/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://dailyjavascriptblog.netlify.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://dailyjavascriptblog.netlify.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://dailyjavascriptblog.netlify.com/css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="https://dailyjavascriptblog.netlify.com/css/custom.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Daily JavaScript" />
+
+  
+</head>
+
+  <body class="theme-base-0a ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://dailyjavascriptblog.netlify.com/"><h1>Daily JavaScript</h1></a>
+      <p class="lead">
+       Learning how to be a better programmer 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://dailyjavascriptblog.netlify.com/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2018. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>What is strict mode and should you enable it when writing JavaScript?</h1>
+  <time datetime=2018-11-20T00:16:19-0500 class="post-date">Tue, Nov 20, 2018</time>
+  
+
+<p>A few of our users at <strong><a href="https://www.dailyjavascript.io">Daily JavaScript</a></strong> have emailed me asking if they should enable strict mode when writing the solution to the daily javascript coding challenges. I decided to write a post to clarify to all our users what strict mode is and if there is any benefits to enabling it when writing their coding solutions.</p>
+
+<h2 id="tl-dr">TL;DR</h2>
+
+<blockquote>
+<p><strong>JavaScript lets you declare &lsquo;strict mode&rsquo; in your JavaScript files to remove some of the flexibility innate in the JavaScript language prior to ES5. It&rsquo;s not required for solving the coding challenges and no company is going to think poorly of you if you neglect to include it in your solutions when you are given a coding challenge or whiteboard problem during a technical interview.</strong></p>
+</blockquote>
+
+<p>With that out of the way, let&rsquo;s dive into what strict mode is and how we would enable it.</p>
+
+<p>Strict Mode was a feature introduced in ES5.  When you enable it, the JavaScript runtime prevents certain code that&rsquo;s considered bad practice from being executed and throws more exceptions instead of silently failing.</p>
+
+<p>So why is this good?</p>
+
+<p>JavaScript is designed to be easy for developers to write and execute code.  Compared to say Haskell or Java, JavaScript developers do not have to worry about compiling their code or writing types.  So if you&rsquo;re a novice JavaScript developer, you could get a program set up and working pretty fast.  This speed though has some drawbacks in that some of the code written can contain bugs that affect the program much later on as the complexity of the program increases.  With strict mode enabled, some classification of bugs are caught much earlier and can be fixed by the developer before it affects the program.  Three common beginner JavaScript developer bugs restricted with strict mode:
+<ol>
+<li>Strict mode makes it impossible to accidentally create global variables</p>
+
+<pre><code>function notStrictModeEnabled() {
+		x = 17
+ };
+ notStrictModeEnabled() //no errors
+</code></pre>
+
+<pre><code>function strictModeEnabled() {
+  'use strict'
+		x = 17
+ };
+ strictModeEnabled() //errors
+</code></pre>
+
+<p></li>
+<li>Strict mode makes assignments which would otherwise silently fail to throw an exception.</p>
+
+<pre><code>function notStrictModeEnabled() {
+		Infinity = 17
+ };
+ notStrictModeEnabled() //no errors
+</code></pre>
+
+<pre><code>function strictModeEnabled() {
+  'use strict'
+		Infinity = 17
+ };
+ strictModeEnabled() //errors
+</code></pre>
+
+<p></li>
+<li>Strict mode requires that function parameter names be unique.</p>
+
+<pre><code> function notUniqueParamsInFunction(a, a, c) {
+  'use strict';
+  return a + a + c; // errors
+}
+</code></pre>
+
+<p></li>
+</ol>
+There are many more restrictions that strict mode introduces that you can read about in the official standards on page 235: <a href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf">ECMA Language Specification</a> or you can check out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">MDN</a> Strict Mode article for a more readable experience</p>
+
+<p>Cool! So how do I enable this in my code?</p>
+
+<p>There are four ways to enable &lsquo;strict mode&rsquo;:
+<ol>
+<li>You include it at the top of your file or script tag.</p>
+
+<pre><code> 'use strict';
+
+ //...rest of your file
+</code></pre>
+
+<p>or</p>
+
+<pre><code> &lt;script&gt;
+ `use strict`
+ // ...rest of your code
+ &lt;/script&gt;
+</code></pre>
+
+<p></li>
+<li>You can include it at the top of your function declaration or function expression.</p>
+
+<pre><code> function strictModeEnabledFunctionDeclaration(){
+   'use strict';
+   //...rest of your code;
+ }
+
+ var strictModeEnabledFunctionExpression = function() {
+   'use strict';
+   //...rest of your code;
+ }
+</code></pre>
+
+<p></li>
+<li>Your code is automatically in strict mode if you export it as a module.</p>
+
+<pre><code>function strictModule() {
+    // because this is a module, I'm strict by default
+}
+
+export default strictModule;
+</code></pre>
+
+<p></li>
+<li>Use babel.  In Babel 6, transformations for ES6 modules ran on whatever files it was told to process, never taking into account if the file actually had ES6 imports/exports in them.  This had the effect of inserting &ldquo;use strict&rdquo; at the top of all modules that were processed by Babel.  In Babel 7, you would have to enable this behavior by using transform-strict-mode plugin.
+</li>
+</ol></p>
+
+<p>There are other benefits to using strict mode that I didn&rsquo;t mention in this post that you can read about more in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">MDN</a> Strict Mode article mentioned above.   These include code optimization by the JavaScript engine in browsers, more secure JavaScript code and restricting namespaces for future JavaScript features.  Some big companies currently using strict mode in production include Facebook and Google.</p>
+
+<blockquote>
+<p><strong>If you found this article interesting or would love to become a better programmer, consider signing up for free at <a href="https://www.dailyjavascript.io">Daily Javascript</a> to get daily javascript challenges, code snippets and articles.</strong></p>
+</blockquote>
+
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>

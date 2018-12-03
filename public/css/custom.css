@@ -8,8 +8,13 @@
   background-color: #f3df49;
   color: #2e2e2c;
 }
-.theme-base-0a .content a {
+
+article.post h1.post-title a {
   color: #2e2e2c;
+}
+
+div.read-more-link a{
+  color: red;
 }
 
 

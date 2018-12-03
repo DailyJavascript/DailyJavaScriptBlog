@@ -22,12 +22,12 @@
     
     <item>
       <title>What is strict mode and should you enable it when writing JavaScript?</title>
-      <link>https://dailyjavascriptblog.netlify.com/posts/my-first-post/</link>
+      <link>https://dailyjavascriptblog.netlify.com/posts/strict-mode/</link>
       <pubDate>Tue, 20 Nov 2018 00:16:19 -0500</pubDate>
       
-      <guid>https://dailyjavascriptblog.netlify.com/posts/my-first-post/</guid>
+      <guid>https://dailyjavascriptblog.netlify.com/posts/strict-mode/</guid>
       <description>A few of our users at Daily JavaScript have emailed me asking if they should enable strict mode when writing the solution to the daily javascript coding challenges. I decided to write a post to clarify to all our users what strict mode is and if there is any benefits to enabling it when writing their coding solutions.
-TL;DR JavaScript lets you declare &amp;lsquo;strict mode&amp;rsquo; in your JavaScript files to remove some of the flexibility innate in the JavaScript language prior to ES5.</description>
+TL;DR  JavaScript lets you declare &amp;lsquo;strict mode&amp;rsquo; in your JavaScript files to remove some of the flexibility innate in the JavaScript language prior to ES5.</description>
     </item>
     
   </channel>
