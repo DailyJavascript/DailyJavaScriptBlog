@@ -2,31 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Daily JavaScript</title>
-    <link>http://example.org/posts/</link>
+    <link>https://dailyjavascriptblog.netlify.com/posts/</link>
     <description>Recent content in Posts on Daily JavaScript</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 20 Nov 2018 12:15:10 -0500</lastBuildDate>
     
-	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dailyjavascriptblog.netlify.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My Second Post</title>
-      <link>http://example.org/posts/my-fsecondd-post/</link>
+      <link>https://dailyjavascriptblog.netlify.com/posts/my-fsecondd-post/</link>
       <pubDate>Tue, 20 Nov 2018 12:15:10 -0500</pubDate>
       
-      <guid>http://example.org/posts/my-fsecondd-post/</guid>
+      <guid>https://dailyjavascriptblog.netlify.com/posts/my-fsecondd-post/</guid>
       <description>Donec consectetur risus ut blandit condimentum. Aliquam ac elit erat. Ut condimentum sem sed justo blandit convallis. Donec semper nibh a sodales fringilla. Ut at dolor id augue iaculis varius nec a nisl. Vestibulum a nulla et elit mattis commodo ac at sem. Suspendisse commodo risus in sem gravida, et scelerisque leo molestie. In aliquet ipsum nisl, eu accumsan elit fringilla a. Integer quis magna eros. Nam purus mauris, auctor sit amet ante eget, convallis accumsan nunc.</description>
     </item>
     
     <item>
-      <title>Why learn JavaScript?</title>
-      <link>http://example.org/posts/my-first-post/</link>
+      <title>What is strict mode and should you enable it when writing JavaScript?</title>
+      <link>https://dailyjavascriptblog.netlify.com/posts/my-first-post/</link>
       <pubDate>Tue, 20 Nov 2018 00:16:19 -0500</pubDate>
       
-      <guid>http://example.org/posts/my-first-post/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec bibendum tortor. Pellentesque felis dui, mattis eu condimentum sed, congue sed tortor. Fusce tincidunt felis ac lacus ultrices condimentum. Sed ut mi quis turpis tincidunt lacinia. Curabitur tempus vel felis a fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut pellentesque sodales risus, id faucibus leo elementum ut. Cras tempor commodo posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</description>
+      <guid>https://dailyjavascriptblog.netlify.com/posts/my-first-post/</guid>
+      <description>A few of our users at Daily JavaScript have emailed me asking if they should enable strict mode when writing the solution to the daily javascript coding challenges. I decided to write a post to clarify to all our users what strict mode is and if there is any benefits to enabling it when writing their coding solutions.
+TL;DR JavaScript lets you declare &amp;lsquo;strict mode&amp;rsquo; in your JavaScript files to remove some of the flexibility innate in the JavaScript language prior to ES5.</description>
     </item>
     
   </channel>

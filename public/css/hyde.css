@@ -32,9 +32,7 @@
  */
 
 html {
-  /* font-size: calc( attr(width) * 0.58 )... If only one could. */
-  /* oh god no... can someone please get http://www.houseind.com/fonts/neutraface2 into the public domain. */
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
@@ -67,7 +65,7 @@ html {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 14rem;
+    width: 18rem;
     text-align: left;
   }
 }
@@ -79,10 +77,10 @@ html {
 
 /* About section */
 .sidebar-about h1 {
-  color: sidebar-about;
+  color: #fff;
   margin-top: 0;
-  /* font-family: "Abril Fatface", serif; */
-  font-size: 2rem;
+  font-family: "Abril Fatface", serif;
+  font-size: 3.25rem;
 }
 
 /* Sidebar nav */
@@ -107,14 +105,14 @@ a.sidebar-nav-item:focus {
  * contents to the bottom of the sidebar in tablets and up.
  */
 
-/* @media (min-width: 48em) {
+@media (min-width: 48em) {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
     bottom: 1rem;
     left:   1rem;
   }
-} */
+}
 
 
 /* Container
@@ -130,18 +128,18 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 48em) {
   .content {
-    /* max-width: 38rem; */
-    margin-left: 15rem;
-    /* margin-right: 2rem; */
+    max-width: 38rem;
+    margin-left: 20rem;
+    margin-right: 2rem;
   }
 }
 
-/* @media (min-width: 64em) {
+@media (min-width: 64em) {
   .content {
     margin-left: 22rem;
     margin-right: 4rem;
   }
-} */
+}
 
 
 /*
@@ -199,11 +197,11 @@ a.sidebar-nav-item:focus {
 
 /* Yellow */
 .theme-base-0a .sidebar {
-  background-color: #f3df49
+  background-color: #f4bf75;
 }
 .theme-base-0a .content a,
 .theme-base-0a .related-posts li a:hover {
-  color: #2e2e2c;
+  color: #f4bf75;
 }
 
 /* Green */

@@ -48,6 +48,7 @@ body {
 }
 
 html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -145,9 +146,9 @@ abbr[title] {
 
 /* Code */
 code,
-/* pre {
+pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
-} */
+}
 code {
   padding: .25em .5em;
   font-size: 85%;
@@ -233,7 +234,6 @@ tbody tr:nth-child(odd) th {
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
-  color: #313131;
 }
 
 
@@ -259,11 +259,11 @@ tbody tr:nth-child(odd) th {
  */
 
 .container {
-  /* max-width: 38rem; */
-  padding-left:  0.5rem;
-  /* padding-right: 1rem; */
-  /* margin-left:  1rem;
-  margin-right: auto; */
+  max-width: 38rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
 }
 
 
@@ -304,12 +304,6 @@ tbody tr:nth-child(odd) th {
 .page,
 .post {
   margin-bottom: 4em;
-}
-
-.post {
-  margin-left: 1rem;
-  margin-right: 1.5rem;
-  text-align: justify;
 }
 
 /* Blog post or page title */
@@ -368,7 +362,7 @@ tbody tr:nth-child(odd) th {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  /* font-family: "PT Sans", Helvetica, Arial, sans-serif; */
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
 }
@@ -406,14 +400,4 @@ a.pagination-item:hover {
     border-top-right-radius:    4px;
     border-bottom-right-radius: 4px;
   }
-}
-
-@media (max-width: 31em) {
-  h1 {
-    font-size: 1.6rem;
-  }
-}
-
-.copyright {
-  font-size: 0.8rem;
 }
