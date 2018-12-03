@@ -11,7 +11,7 @@ A few of our users at **[Daily JavaScript](https://www.dailyjavascript.io)** hav
 
 With that out of the way, let's dive into what strict mode is and how we would enable it.
 
-Strict Mode was a feature introduced in ES5.  When you enable it, the JavaScript runtime prevents certain code that's considered bad practice from being executed and throws more exceptions instead of silently failing.
+Strict Mode was a feature introduced in ES5.  When you enable it, the JavaScript runtime prevents certain code that's considered bad practice from being executed and throws exceptions instead of silently failing.
 
 So why is this good?
 
@@ -21,7 +21,7 @@ JavaScript is designed to be easy for developers to write and execute code.  Com
 
 ```
 function notStrictModeEnabled() {
-		x = 17
+	x = 17
  };
  notStrictModeEnabled() //no errors
  ```
@@ -29,7 +29,7 @@ function notStrictModeEnabled() {
  ```
 function strictModeEnabled() {
   'use strict'
-		x = 17
+	x = 17
  };
  strictModeEnabled() //errors
 ```
@@ -38,7 +38,7 @@ function strictModeEnabled() {
 
 ```
 function notStrictModeEnabled() {
-		Infinity = 17
+	Infinity = 17
  };
  notStrictModeEnabled() //no errors
  ```
@@ -46,7 +46,7 @@ function notStrictModeEnabled() {
  ```
 function strictModeEnabled() {
   'use strict'
-		Infinity = 17
+	Infinity = 17
  };
  strictModeEnabled() //errors
 ```
