@@ -2,7 +2,8 @@ baseURL = "https://dailyjavascriptblog.netlify.com/"
 languageCode = "en-us"
 title = "Daily JavaScript"
 theme = ["custom", "hyde"]
-
 [params]
   themeColor = "theme-base-0a"
   description = "Learning how to be a better programmer"
+  LandingURL = "https://www.dailyjavascript.io?refcode=9f4c9035ec736ad8efa1"
+  siteLinkSidebarURLTitle = "www.dailyjavascript.io"

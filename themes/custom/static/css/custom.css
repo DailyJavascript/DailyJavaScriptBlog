@@ -27,8 +27,14 @@ div.read-more-link a{
 }
 
 .sidebar-about h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #2e2e2c;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+a.site-link-sidebar {
+  color: #2e2e2c;
+  font-weight: 200;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
@@ -52,6 +58,18 @@ main.content.container {
   main h1{
     text-align: justify;
     font-size: 1.32rem;
+  }
+}
+
+@media (min-width: 0rem) and (max-width: 767) {
+  .theme-base-0a aside.sidebar {
+    /* font-size: calc( attr(width) * 0.58 )... If only one could. */
+    /* oh god no... can someone please get http://www.houseind.com/fonts/neutraface2 into the public domain. */
+    letter-spacing: -1px;
+    font-weight: 700;
+    background-color: #f3df49;
+    color: #2e2e2c;
+    width: 18rem;
   }
 }
 
