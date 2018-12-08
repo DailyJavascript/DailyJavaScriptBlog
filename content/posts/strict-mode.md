@@ -21,40 +21,44 @@ JavaScript is designed to be easy for developers to write and execute code.  Com
 
 ```
 function notStrictModeEnabled() {
-	x = 17
- };
- notStrictModeEnabled() //no errors
- ```
+  x = 17
+};
 
- ```
+notStrictModeEnabled() //no errors
+```
+
+```
 function strictModeEnabled() {
   'use strict'
-	x = 17
- };
- strictModeEnabled() //errors
+  x = 17
+};
+
+strictModeEnabled() //errors
 ```
 </li>
 <li>Strict mode makes assignments which would otherwise silently fail to throw an exception.
 
 ```
 function notStrictModeEnabled() {
-	Infinity = 17
- };
- notStrictModeEnabled() //no errors
- ```
+  Infinity = 17
+};
 
- ```
+notStrictModeEnabled() //no errors
+```
+
+```
 function strictModeEnabled() {
   'use strict'
-	Infinity = 17
- };
- strictModeEnabled() //errors
+  Infinity = 17
+};
+
+strictModeEnabled() //errors
 ```
 </li>
 <li>Strict mode requires that function parameter names be unique.
 
 ```
- function notUniqueParamsInFunction(a, a, c) {
+function notUniqueParamsInFunction(a, a, c) {
   'use strict';
   return a + a + c; // errors
 }
