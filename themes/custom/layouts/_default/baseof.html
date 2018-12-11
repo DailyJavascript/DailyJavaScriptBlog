@@ -7,5 +7,20 @@
 
     {{ template "_internal/google_analytics_async.html" . }}
   </body>
-  apple
+  <script>
+      if (!parseSessionStorageJSON('refcode') && getRefCode()) {
+        storeInSessionStorage('refcode', getRefCode());
+      }
+      if (!getRefCode()) {
+        storeInSessionStorage('refcode', "refcode=f214fa9c4f9142f834e2");
+      }
+    </script>
+    <script>
+      if (parseSessionStorageJSON('refcode')) {
+        var aElement = document.getElementsByClassName('landing-link');
+        for (var i=0, aLength=aElement.length; i < aLength; i++) {
+          aElement[i].href = aElement[i].href + '?' + parseSessionStorageJSON('refcode');
+        }
+      }
+  </script>
 </html>
