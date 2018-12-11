@@ -9,14 +9,14 @@
 
     <nav>
       <ul class="sidebar-nav">
-        <li><a href="{{ .Site.BaseURL }}">Home</a> </li>
+        <li><a class="landing-link" href="{{ .Site.BaseURL }}">Home</a> </li>
         {{ range .Site.Menus.main -}}
         <li><a href="{{.URL}}"> {{ .Name }} </a></li>
         {{- end }}
       </ul>
     </nav>
 
-    <a class="site-link-sidebar" href="{{ .Site.Params.LandingURL }}">{{.Site.Params.siteLinkSidebarURLTitle}}</a>
+    <a class="landing-link site-link-sidebar" href="{{ .Site.Params.LandingURL }}">{{.Site.Params.siteLinkSidebarURLTitle}}</a>
     <p>{{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; {{ now.Format "2006"}}. All rights reserved. {{end}}</p>
   </div>
 </aside>

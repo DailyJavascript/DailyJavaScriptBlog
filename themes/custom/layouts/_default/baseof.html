@@ -1,0 +1,26 @@
+{{ partial "head.html" . }}
+  <body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
+  {{ partial "sidebar.html" . }}
+    <main class="content container">
+    {{ block "main" . -}}{{- end }}
+    </main>
+
+    {{ template "_internal/google_analytics_async.html" . }}
+  </body>
+  <script>
+      if (!parseSessionStorageJSON('refcode') && getRefCode()) {
+        storeInSessionStorage('refcode', getRefCode());
+      }
+      if (!getRefCode()) {
+        storeInSessionStorage('refcode', "refcode=f214fa9c4f9142f834e2");
+      }
+    </script>
+    <script>
+      if (parseSessionStorageJSON('refcode')) {
+        var aElement = document.getElementsByClassName('landing-link');
+        for (var i=0, aLength=aElement.length; i < aLength; i++) {
+          aElement[i].href = aElement[i].href + '?' + parseSessionStorageJSON('refcode');
+        }
+      }
+  </script>
+</html>

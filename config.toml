@@ -5,5 +5,5 @@ theme = ["custom", "hyde"]
 [params]
   themeColor = "theme-base-0a"
   description = "Learning how to be a better programmer"
-  LandingURL = "https://www.dailyjavascript.io?refcode=9f4c9035ec736ad8efa1"
+  LandingURL = "https://www.dailyjavascript.io"
   siteLinkSidebarURLTitle = "www.dailyjavascript.io"
