@@ -19,7 +19,7 @@ JavaScript is designed to be easy for developers to write and execute code.  Com
 <ol>
 <li>Strict mode makes it impossible to accidentally create global variables
 
-```
+```javascript
 function notStrictModeEnabled() {
   x = 17
 };
@@ -27,7 +27,7 @@ function notStrictModeEnabled() {
 notStrictModeEnabled() //no errors
 ```
 
-```
+```javascript
 function strictModeEnabled() {
   'use strict'
   x = 17
@@ -38,7 +38,7 @@ strictModeEnabled() //errors
 </li>
 <li>Strict mode makes assignments which would otherwise silently fail to throw an exception.
 
-```
+```javascript
 function notStrictModeEnabled() {
   Infinity = 17
 };
@@ -46,7 +46,7 @@ function notStrictModeEnabled() {
 notStrictModeEnabled() //no errors
 ```
 
-```
+```javascript
 function strictModeEnabled() {
   'use strict'
   Infinity = 17
@@ -57,7 +57,7 @@ strictModeEnabled() //errors
 </li>
 <li>Strict mode requires that function parameter names be unique.
 
-```
+```javascript
 function notUniqueParamsInFunction(a, a, c) {
   'use strict';
   return a + a + c; // errors
@@ -73,7 +73,7 @@ There are four ways to enable 'strict mode':
 <ol>
 <li>You include it at the top of your file or script tag.
 
-```
+```javascript
  'use strict';
 
  //...rest of your file
@@ -81,16 +81,16 @@ There are four ways to enable 'strict mode':
 
 or
 
-```
- <script>
+```javascript
+<script>
  `use strict`
  // ...rest of your code
- </script>
+</script>
 ```
 </li>
 <li>You can include it at the top of your function declaration or function expression.
 
-```
+```javascript
  function strictModeEnabledFunctionDeclaration(){
    'use strict';
    //...rest of your code;
@@ -104,7 +104,7 @@ or
 </li>
 <li>Your code is automatically in strict mode if you export it as a module.
 
-```
+```javascript
 function strictModule() {
     // because this is a module, I'm strict by default
 }
