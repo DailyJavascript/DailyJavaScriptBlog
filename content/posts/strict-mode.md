@@ -4,7 +4,7 @@ date: 2018-11-20T00:16:19-05:00
 draft: false
 ---
 
-A few of our users at **[Daily JavaScript](https://www.dailyjavascript.io?refcode=f214fa9c4f9142f834e2)** have emailed me asking if they should enable strict mode when writing the solution to the daily javascript coding challenges. I decided to write a post to clarify to all our users what strict mode is and if there is any benefits to enabling it when writing their coding solutions.
+A few of our users at {{< url >}} have emailed me asking if they should enable strict mode when writing the solution to the daily javascript coding challenges. I decided to write a post to clarify to all our users what strict mode is and if there is any benefits to enabling it when writing their coding solutions.
 
 ## TL;DR
 >**JavaScript lets you declare 'strict mode' in your JavaScript files to remove some of the flexibility innate in the JavaScript language prior to ES5. It's not required for solving the coding challenges and no company is going to think poorly of you if you neglect to include it in your solutions when you are given a coding challenge or whiteboard problem during a technical interview.**
@@ -118,4 +118,6 @@ export default strictModule;
 
 There are other benefits to using strict mode that I didn't mention in this post that you can read about more in the [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) Strict Mode article mentioned above.   These include code optimization by the JavaScript engine in browsers, more secure JavaScript code and restricting namespaces for future JavaScript features.  Some big companies currently using strict mode in production include Facebook and Google.
 
->**If you found this article interesting or would love to become a better programmer, consider signing up for free at [Daily Javascript](https://www.dailyjavascript.io?refcode=f214fa9c4f9142f834e2) to get daily javascript challenges, code snippets and articles.**
+>**If you found this article interesting or would love to become a better programmer, consider signing up for free at {{< url >}} to get daily javascript challenges, code snippets and articles.**
+
+{{< refcode >}}
