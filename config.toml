@@ -2,6 +2,8 @@ baseURL = "https://dailyjavascriptblog.netlify.com/"
 languageCode = "en-us"
 title = "Daily JavaScript"
 theme = ["custom", "hyde"]
+PygmentsStyle = "monokai"
+PygmentsCodeFences = true
 [params]
   themeColor = "theme-base-0a"
   description = "Learning how to be a better programmer"
