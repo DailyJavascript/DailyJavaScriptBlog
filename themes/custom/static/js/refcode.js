@@ -17,32 +17,32 @@ function getRefCode(){
 }
 
 // --- sessionStorage functions
-const sessionStorageSupported = () => {
+const localStorageSupported = () => {
   try {
     const key = "testLocalStorage";
-    window.sessionStorage.setItem(key, key);
-    window.sessionStorage.removeItem(key);
+    window.localStorage.setItem(key, key);
+    window.localStorage.removeItem(key);
     return true;
   } catch (e) {
     return false;
   }
 };
 
-const storeInSessionStorage = (key, value) => {
+const storeInlocalStorage = (key, value) => {
   const jsonValue = JSON.stringify(value);
-  if (sessionStorageSupported()) {
+  if (localStorageSupported()) {
     try {
-      window.sessionStorage.setItem(key, jsonValue);
+      window.localStorage.setItem(key, jsonValue);
     } catch(e) {
       return;
     }
   }
 };
 
-const clearFromSessionStorage = (key) => {
-  if (sessionStorageSupported()) {
+const clearFromlocalStorage = (key) => {
+  if (localStorageSupported()) {
     try {
-      window.sessionStorage.removeItem(key);
+      window.localStorage.removeItem(key);
     } catch(e) {
       return;
     }
@@ -50,10 +50,10 @@ const clearFromSessionStorage = (key) => {
 };
 
 //item is a string that is the key stored in the browser's local storage
-const parseSessionStorageJSON = (item) => {
-  if (sessionStorageSupported()) {
+const parselocalStorageJSON = (item) => {
+  if (localStorageSupported()) {
     try {
-      return JSON.parse(window.sessionStorage.getItem(item));
+      return JSON.parse(window.localStorage.getItem(item));
     } catch(e) {
       return false;
     }
