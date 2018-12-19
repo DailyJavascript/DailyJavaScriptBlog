@@ -59,3 +59,28 @@ const parseSessionStorageJSON = (item) => {
     }
   }
 };
+
+function postRefCode() {
+  const xhr = new XMLHttpRequest();
+  const refcode = getRefCode();
+
+  if (!xhr) {
+    return false;
+  }
+
+  xhr.open("POST", 'https://dailyjavascript.herokuapp.com/users/visit', true);
+  //Send the proper header information along with the request
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xhr.onreadystatechange = function () { // Call a function when the state changes.
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+      storeInLocalStorage('visitID', xhr.response);
+    }
+  }
+  xhr.send("blogVisit=1&"+refcode);
+}
+
+window.addEventListener('load', function() {
+  if (!parseLocalStorageJSON('visitID')){
+    postRefCode(getRefCode());
+  }
+});
