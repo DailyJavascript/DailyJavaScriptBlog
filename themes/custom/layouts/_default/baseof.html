@@ -8,18 +8,18 @@
     {{ template "_internal/google_analytics_async.html" . }}
   </body>
   <script>
-      if (!parseSessionStorageJSON('refcode') && getRefCode()) {
-        storeInSessionStorage('refcode', getRefCode());
+      if (!parseLocalStorageJSON('refcode') && getRefCode()) {
+        storeInLocalStorage('refcode', getRefCode());
       }
       if (!getRefCode()) {
-        storeInSessionStorage('refcode', "refcode=3e9f5f7de14638431b88");
+        storeInLocalStorage('refcode', "refcode=3e9f5f7de14638431b88");
       }
     </script>
     <script>
-      if (parseSessionStorageJSON('refcode')) {
+      if (parseLocalStorageJSON('refcode')) {
         var aElement = document.getElementsByClassName('landing-link');
         for (var i=0, aLength=aElement.length; i < aLength; i++) {
-          aElement[i].href = aElement[i].href + '?' + parseSessionStorageJSON('refcode');
+          aElement[i].href = aElement[i].href + '?' + parseLocalStorageJSON('refcode');
         }
       }
   </script>
