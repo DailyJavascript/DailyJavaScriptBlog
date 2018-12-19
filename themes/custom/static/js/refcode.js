@@ -28,7 +28,7 @@ const localStorageSupported = () => {
   }
 };
 
-const storeInlocalStorage = (key, value) => {
+const storeInLocalStorage = (key, value) => {
   const jsonValue = JSON.stringify(value);
   if (localStorageSupported()) {
     try {
@@ -39,7 +39,7 @@ const storeInlocalStorage = (key, value) => {
   }
 };
 
-const clearFromlocalStorage = (key) => {
+const clearFromLocalStorage = (key) => {
   if (localStorageSupported()) {
     try {
       window.localStorage.removeItem(key);
@@ -50,7 +50,7 @@ const clearFromlocalStorage = (key) => {
 };
 
 //item is a string that is the key stored in the browser's local storage
-const parselocalStorageJSON = (item) => {
+const parseLocalStorageJSON = (item) => {
   if (localStorageSupported()) {
     try {
       return JSON.parse(window.localStorage.getItem(item));
