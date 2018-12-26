@@ -47,14 +47,15 @@ Some books that are highly recommended are:
   <li> Elements of Programming Interviews</li>
   <li> Cracking The Coding Interview</li>
 </ul>
-Some tools to help you practice coding challenges:
+
+Some online tools to help you practice coding challenges:
 
 <ul>
-  <li>Leetcode</li>
-  <li>Hackerrank</li>
-  <li>CoderByte</li>
-  <li>Project Euler</li>
-  <li>Codewars</li>
+  <li><a href="https://leetcode.com/">Leetcode</a></li>
+  <li><a href=https://www.hackerrank.com">Hackerrank</a></li>
+  <li><a href="https://coderbyte.com/">coderbyte</a></li>
+  <li><a href="https://projecteuler.net/">Project Euler</a></li>
+  <li><a href="https://www.codewars.com/">Codewars</a></li>
 </ul>
 
 Unfortunately, this does put people with life obligations compared to those without at a disadvantage.  If you have kids to feed or a job to pay the bills, it does become harder to train since you have to use your time wisely.
@@ -69,6 +70,6 @@ After practicing, one last thing to keep in mind is that the tech job market is 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-You can find some more rejection "rags to riches" type stories at [Rejected](https://rejected.us/).
+You can find some more rejection "rags to riches" type stories at [rejected.us](https://rejected.us/).
 
 >**If you found this article interesting or would love to become a better programmer, consider signing up for free at {{< url >}} to get daily javascript challenges, code snippets and articles.**
