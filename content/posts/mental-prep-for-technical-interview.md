@@ -44,8 +44,8 @@ If you didn't go to Stanford or MIT do not worry, there are a lot of really good
 
 Some books that are highly recommended are:
 <ul>
-  <li> Elements of Programming Interviews</li>
-  <li> Cracking The Coding Interview</li>
+  <li> *Elements of Programming Interviews* </li>
+  <li> *Cracking The Coding Interview* </li>
 </ul>
 
 Some online tools to help you practice coding challenges:
