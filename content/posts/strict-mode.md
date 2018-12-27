@@ -118,4 +118,4 @@ export default strictModule;
 
 There are other benefits to using strict mode that I didn't mention in this post that you can read about more in the [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) Strict Mode article mentioned above.   These include code optimization by the JavaScript engine in browsers, more secure JavaScript code and restricting namespaces for future JavaScript features.  Some big companies currently using strict mode in production include Facebook and Google.
 
->**If you found this article interesting or would love to become a better programmer, consider signing up for free at {{< url >}} to get daily javascript challenges, code snippets and articles.**
+>**If you found this article interesting or would love to become a better programmer, consider signing up at {{< url >}} to get daily javascript challenges, code snippets and articles.**

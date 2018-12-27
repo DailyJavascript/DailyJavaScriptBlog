@@ -4,7 +4,7 @@ date: 2018-12-26T12:33:31-08:00
 draft: false
 ---
 
-We all have to pass the dreaded technical interview hurdle to even have a shot at a job offer from our desired employer unless of course you're acqui hired by the company you've always dreamed of working for. Unless you're in that 1%, it doesn't matter if you're self-taught, just graduated with a cs degree, recently completed a boot camp or are checking-in with the job market after a few years of gainful employment, we all have to pass the technical interview to get a job.
+We all have to pass the dreaded technical interview to even have a shot at a job offer from our desired employer unless of course you're acqui-hired by the company you've always dreamed of working for. Unless you're in that 1%, it doesn't matter if you're self-taught, just graduated with a cs degree, recently completed a boot camp or are checking-in with the job market after a few years of gainful employment, we all have to pass the technical interview to get a job.
 
 In another post I'll go over more of the technical information that you need to know to pass the interview.  In this post, I'd like to go over the mindset you will need to have in order to:
 <ol type="a">
@@ -36,7 +36,7 @@ Maybe, but Google did an [internal study](https://www.nytimes.com/2013/06/20/bus
 "Years ago, we did a study to determine whether anyone at Google is particularly good at hiring. We looked at tens of thousands of interviews, and everyone who had done the interviews and what they scored the candidate, and how that person ultimately performed in their job. We found zero relationship. It’s a complete random mess, except for one guy who was highly predictive because he only interviewed people for a very specialized area, where he happened to be the world’s leading expert."
 >
 
-So somehow this highly variable process that doesn't really correlate to on the job performance is used by most technical companies as a way to do hiring. Do not despair if you end up failing a technical interview or even a few technical interviews, this is a process and it's also highly learnable. As mentioned earlier, 80% of people are inconsistent with how well they interview. So there's a lot of room to develop develop better consistency. Students from top computer science programs are even lucky enough to have classes entirely devoted to learning how to do well on technical interviews.
+So somehow this highly variable process that doesn't really correlate to on the job performance is used by most technical companies as a way to do hiring. Do not despair if you end up failing a technical interview or even a few technical interviews, this is a process and it's also highly learnable. As mentioned earlier, 80% of people are inconsistent with how well they interview, so there's a lot of room to develop better consistency. Students from top computer science programs are even lucky enough to have classes entirely devoted to learning how to do well on technical interviews.
 
 Here's a past [Stanford course] (http://web.stanford.edu/class/cs9/) and also a past [MIT course](http://courses.csail.mit.edu/iap/interview/index.php).
 
@@ -72,4 +72,4 @@ After practicing, one last thing to keep in mind is that the tech job market is 
 
 You can find some more rejection "rags to riches" type stories at [rejected.us](https://rejected.us/).
 
->**If you found this article interesting or would love to become a better programmer, consider signing up for free at {{< url >}} to get daily javascript challenges, code snippets and articles.**
+>**If you found this article interesting or would love to become a better programmer, consider signing up at {{< url >}} to get daily javascript challenges, code snippets and articles.**
