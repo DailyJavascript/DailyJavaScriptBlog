@@ -68,7 +68,7 @@ function postRefCode() {
     return false;
   }
 
-  xhr.open("POST", 'https://dailyjavascript.herokuapp.com/users/visit', true);
+  xhr.open("POST", 'https://dailyjavascript.herokuapp.com/visits', true);
   //Send the proper header information along with the request
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xhr.onreadystatechange = function () { // Call a function when the state changes.
