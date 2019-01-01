@@ -1,5 +1,5 @@
 ---
-title: "Three things to keep in mind before a technical interview"
+title: "Three things you must keep in mind before a technical interview"
 date: 2018-12-26T12:33:31-08:00
 draft: false
 ---
